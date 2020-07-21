@@ -1,4 +1,7 @@
-﻿// Upgrade NOTE: replaced '_LightMatrix0' with 'unity_WorldToLight'
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_LightMatrix0' with 'unity_WorldToLight'
 // Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
@@ -46,11 +49,11 @@ Shader "Custom/Shadow"
 
 		v2f vert(a2v v) {
 			v2f o;
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 
 			o.worldNormal = UnityObjectToWorldNormal(v.normal);
 
-			o.worldPos = mul(_Object2World, v.vertex).xyz;
+			o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 
 			// Pass shadow coordinates to pixel shader
 			TRANSFER_SHADOW(o);
@@ -116,11 +119,11 @@ Shader "Custom/Shadow"
 
 			v2f vert(a2v v) {
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 
 				o.worldNormal = UnityObjectToWorldNormal(v.normal);
 
-				o.worldPos = mul(_Object2World, v.vertex).xyz;
+				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 
 				// Pass shadow coordinates to pixel shader
 				TRANSFER_SHADOW(o);
