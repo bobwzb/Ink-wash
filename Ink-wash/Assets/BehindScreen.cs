@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[ExecuteInEditMode]
+[RequireComponent(typeof(Camera))]
 public class BehindScreen : MonoBehaviour
 {
     // Start is called before the first frame update
