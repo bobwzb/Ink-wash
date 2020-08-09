@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 9f52c53d74627f04a92f7677210c621f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - edgeDetectShader: {fileID: 4800000, guid: ab5550181bc09614cb6e769613067118, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
