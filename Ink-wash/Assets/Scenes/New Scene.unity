@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 2146961563}
   - component: {fileID: 2146961562}
   - component: {fileID: 2146961565}
+  - component: {fileID: 2146961566}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -454,6 +455,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   briSatConShader: {fileID: 4800000, guid: 4dec0adcb5af16a4eaba95fe4b09f5c1, type: 3}
-  brightness: 0.32
+  brightness: 1
   saturation: 1
   contrast: 1
+--- !u!114 &2146961566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146961561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f52c53d74627f04a92f7677210c621f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edgeDetectShader: {fileID: 4800000, guid: ab5550181bc09614cb6e769613067118, type: 3}
+  edgesOnly: 0
+  edgeColor: {r: 0, g: 0, b: 0, a: 1}
+  backgroundColor: {r: 1, g: 0, b: 0, a: 1}
